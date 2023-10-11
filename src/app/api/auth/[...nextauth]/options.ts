@@ -28,7 +28,12 @@ export const options: NextAuthOptions = {
         },
       },
       async authorize(credentials) {
-        const user = { id: "1001", name: "Jed", password: "waffles" };
+        const user = {
+          id: "1001",
+          name: "Jed",
+          password: "waffles",
+          image: "/vercel.svg",
+        };
         if (
           credentials?.username === user.name &&
           credentials?.password === user.password
